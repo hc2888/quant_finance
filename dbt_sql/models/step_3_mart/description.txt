@@ -1,0 +1,3 @@
+"""Contains the “business-facing” models — fact tables, dimension tables, or analytical aggregates."""
+
+# NOTE: These are the tables typically queried directly by BI tools or analysts.

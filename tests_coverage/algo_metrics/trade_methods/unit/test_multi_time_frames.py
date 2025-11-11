@@ -1,0 +1,27 @@
+"""Python Test(s) for `dags/algo_metrics/trade_methods/multi_time_frames.py`."""
+
+import pandas as pd
+from global_utils.develop_secrets import QUANT_PROJ_PATH
+
+# ----------------------------------------------------------------------------------------------------------------------
+FILE_PATH: str = rf"{QUANT_PROJ_PATH}/tests_coverage/algo_metrics/trade_methods"
+TARGET_SUBFOLDER: str = "multi_time_frames"
+DATA_FOLDER: str = rf"{FILE_PATH}/data/{TARGET_SUBFOLDER}"
+EXPECTED_FOLDER: str = rf"{FILE_PATH}/expected_results/{TARGET_SUBFOLDER}"
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+def test_elder_triple_screen() -> None:
+    """Test the `elder_triple_screen` Calculation."""
+    from algo_metrics.trade_methods.multi_time_frames import elder_triple_screen
+
+    file_name: str = r"elder_triple_screen.csv"
+
+    test_data: str = rf"{DATA_FOLDER}/{file_name}"
+    test_df: pd.DataFrame = pd.read_csv(filepath_or_buffer=test_data)
+    test_result: pd.DataFrame = elder_triple_screen(main_df=test_df)
+
+    expected_data: str = rf"{EXPECTED_FOLDER}/{file_name}"
+    expected_result: pd.DataFrame = pd.read_csv(filepath_or_buffer=expected_data)
+
+    pd.testing.assert_frame_equal(left=test_result, right=expected_result, check_like=True, check_dtype=False)

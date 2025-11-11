@@ -1,0 +1,3 @@
+"""Raw data loading layer."""
+
+# NOTE: Usually contains models (often views or tables) that directly mirror raw source data from your data warehouse.

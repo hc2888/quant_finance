@@ -1,0 +1,122 @@
+[tool.poetry]
+name = "quant_finance"
+version = "2025.10.28"
+description = "Automated Quantitative Financial Analysis"
+authors = ["Harold Choi"]
+# ----------------------------------------------------------------------------------------------------------------------
+[tool.poetry.dependencies]
+# NOTE: CONDA ENVIROMENT & `airflow` DOCKER IMAGE PYTHON VERSIONS MUST MATCH
+python = "==3.12.11"
+# NOTE: NON-VERSIONED LIBRARIES
+altair = { version = "*" }
+docutils = { version = "*" }
+fastapi = { version = "*" }
+flask = { version = "*" }
+jsonschema-path = { version = "*" }
+llvmlite = { version = "*" }
+matplotlib = { version = "*" }
+mlflow = { version = "*" }
+numba = { version = "*" }
+numpy = { version = "*" }
+opentelemetry-exporter-otlp-proto-common = { version = "*" }
+opentelemetry-proto = { version = "*" }
+pandas = { version = "*" }
+psycopg2-binary = { version = "*" }
+pyarrow = { version = "*" }
+pydantic = { version = "*" }
+pydantic_core = { version = "*" }
+referencing = { version = "*" }
+rich = { version = "*" }
+scikit-learn = { version = "*" }
+scipy = { version = "*" }
+sphinx = { version = "*" }
+sqlalchemy = { version = "*" }
+tqdm = { version = "*" }
+typing_extensions = { version = "*" }
+uvicorn = { version = "*" }
+# NOTE: Airflow Constraints: https://github.com/apache/airflow/blob/constraints-main/constraints-3.12.txt
+asyncpg = { version = "==0.30.0" }
+structlog = { version = "==25.4.0" }
+werkzeug = { version = "==2.2.3" }
+# NOTE: IGNORE `Airflow Constraints`; `python-lsp-server` & `spyder` RELATED EXACT VERSIONS
+# NOTE: `spyder` RELATED DEPENDENCIES WHEN KEEPING `poetry` LIBRARY UP TO DATE
+ipykernel = { version = "==6.30.1" }
+ipython = { version = "==8.30.0" }
+jedi = { version = "==0.19.2" }
+psutil = { version = "==7.0.0" }
+pygments = { version = "==2.19.1" }
+qtconsole = { version = "==5.6.1" }
+qtpy = { version = "==2.4.3" }
+rope = { version = "==1.13.0" }
+watchdog = { version = "==4.0.2" }
+# NOTE: IGNORE `Airflow Constraints`; `poetry` RELATED EXACT VERSIONS
+# NOTE: `poetry` RELATED DEPENDENCIES WHEN KEEPING `poetry` LIBRARY UP TO DATE
+fastjsonschema = { version = "==2.20.0" }
+platformdirs = { version = "==4.3.7" }
+requests-toolbelt = { version = "==1.0.0" }
+tomlkit = { version = "==0.13.2" }
+urllib3 = { version = "==2.5.0" }
+# ----------------------------------------------------------------------------------------------------------------------
+[tool.poetry.group.local.dependencies]
+# NOTE: Airflow Constraints: https://github.com/apache/airflow/blob/constraints-main/constraints-3.12.txt
+apache-airflow = { version = "==3.1.0" }
+black = { version = "==25.9.0" }
+# NOTE: UTILITY LIBRARIES
+poetry = { version = "==2.2.1" }
+poetry-plugin-export = { version = "==1.9.0" }
+# NOTE: `ray` IS NOT (YET) COMPATIBLE WITH PYTHON VERSION `3.13.x`
+# NOTE: PERIODICALLY CHECK FOR WHEN `ray` BECOMES AVAILABLE FOR PYTHON VERSION `3.13.x`
+modin = { version = "*", extras = ["ray"] }
+ray = { version = "*" }
+# NOTE: LOCAL ENVIRONMENT ONLY LIBRARIES
+pooch = { version = "*" }
+pre-commit = { version = "*" }
+pytest = { version = "*" }
+pytest-cov = { version = "*" }
+pytest-xdist = { version = "*" }
+streamlit = { version = "*" }
+xgboost = { version = "*" }
+yfinance = { version = "*" }
+# NOTE: THE MOST IMPORTANT LIBRARIES TO BE MINDFUL OF
+astronomer-cosmos = { version = "*" }
+dbt-core = { version = "*" }
+dbt-postgres = { version = "*" }
+pytorch-forecasting = { version = "*" }
+torch = { version = "*" }
+transformers = { version = "*", extras = ["torch"] }
+vectorbt = { version = "*" }
+# NOTE: LIBRARIES IN USE
+connectorx = { version = "*" }
+fredapi = { version = "*" }
+grpcio = { version = "*" }
+imbalanced-learn = { version = "*" }
+nasdaq-data-link = { version = "*" }
+plotly = { version = "*" }
+pyomo = { version = "*" }
+scikit-learn-intelex = { version = "*" }
+seaborn = { version = "*" }
+wandb = { version = "*" }
+# ----------------------------------------------------------------------------------------------------------------------
+[tool.poetry.group.airflow.dependencies]
+# NOTE: THE MOST IMPORTANT LIBRARIES TO BE MINDFUL OF
+astronomer-cosmos = { version = "*" }
+dbt-core = { version = "*" }
+dbt-postgres = { version = "*" }
+pytorch-forecasting = { version = "*" }
+torch = { version = "*" }
+transformers = { version = "*", extras = ["torch"] }
+vectorbt = { version = "*" }
+# NOTE: LIBRARIES IN USE
+connectorx = { version = "*" }
+fredapi = { version = "*" }
+grpcio = { version = "*" }
+imbalanced-learn = { version = "*" }
+nasdaq-data-link = { version = "*" }
+plotly = { version = "*" }
+pyomo = { version = "*" }
+scikit-learn-intelex = { version = "*" }
+seaborn = { version = "*" }
+wandb = { version = "*" }
+# ----------------------------------------------------------------------------------------------------------------------
+[tool.poetry.group.mlflow.dependencies]
+# NO SPECIFIC `mlflow` DEPENDENCIES; JUST CORE DEPENDENCIES

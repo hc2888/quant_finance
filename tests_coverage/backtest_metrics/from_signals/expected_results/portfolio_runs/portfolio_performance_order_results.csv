@@ -1,0 +1,4 @@
+symbol,start_index,end_index,total_duration,total_records,side_counts_buy,side_counts_sell,type_counts_market,type_counts_limit,stop_type_counts_none,stop_type_counts_sl,stop_type_counts_tsl,stop_type_counts_ttp,stop_type_counts_tp,stop_type_counts_td,stop_type_counts_dt,size_min,size_median,size_max,fees_min,fees_median,fees_max,weighted_buy_price,weighted_sell_price,avg_signal_creation_duration,avg_creation_fill_duration,avg_signal_fill_duration,begin_market_date,market_date,market_year,market_month
+SPY,0,1613,1 days 02:54:00,424,212,212,424,0,424,0,0,0,0,0,0,166.87,168.96,173.64,0.0,0.0,0.0,588.78,588.85,0 days,0 days,0 days,2025-01-13,2025-01-13,2025,1
+GOVT,0,1613,1 days 02:54:00,82,41,41,82,0,82,0,0,0,0,0,0,4446.42,4462.29,4496.4,0.0,0.0,0.0,22.36,22.35,0 days,0 days,0 days,2025-01-13,2025-01-13,2025,1
+QTUM,0,1613,1 days 02:54:00,372,186,186,372,0,372,0,0,0,0,0,0,1214.03,1239.77,1304.97,0.0,0.0,0.0,79.87,79.89,0 days,0 days,0 days,2025-01-13,2025-01-13,2025,1

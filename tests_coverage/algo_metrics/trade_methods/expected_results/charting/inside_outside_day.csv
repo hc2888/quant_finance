@@ -1,0 +1,4 @@
+high,low,outside_day,inside_day
+110,100,0,0
+125,90,1,0
+120,105,0,1

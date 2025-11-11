@@ -1,0 +1,39 @@
+# /: The trailing slash means that __pycache__ is a directory.
+# Without the slash, __pycache__ would match both files and directories with that name.
+
+# With the slash, only directories with the name __pycache__ are ignored.
+# a plain name like `__pycache__` or `.idea` tells GitHub to
+# ignore that directory located in the same directory as the `.gitignore` file.
+
+# `/example.txt` to ignore a file named `example.txt` in the root of your repository.
+# `subdirectory/*.txt` to ignore all `.txt` files in the subdirectory folder.
+# `**/example.txt` to ignore all `example.txt` files in any directory in the project.
+__pycache__
+.idea
+.mypy_cache
+.pytest_cache
+
+# Default Airflow folders generated from Docker environment creation
+config
+logs
+plugins
+mlflow_files
+.env
+.coverage
+
+# Custom folders that are kept local
+coverage_report
+data_files
+prototypes
+temp_data
+tech_analysis_orig
+
+# Custom files that are kept local
+/dags/global_utils/develop_secrets.py
+/dags/algo_metrics
+
+# Custom file types that are kept local
+*.pth
+
+# Downloaded Github libraries kept local
+vectorbt.pro

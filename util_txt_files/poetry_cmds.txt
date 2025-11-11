@@ -1,0 +1,17 @@
+pip3 cache purge
+poetry export --with local --without-hashes -f requirements.txt --output requirements-local.txt
+poetry export --with local --without-hashes -f requirements.txt --output requirements-constraints.txt
+poetry export --with airflow --without-hashes -f requirements.txt --output requirements-airflow.txt
+poetry export --with mlflow --without-hashes -f requirements.txt --output requirements-mlflow.txt
+pip3 cache purge
+rm poetry.lock
+yes | poetry cache clear . --all
+sed -i 's/\(\w\+\)\[[^]]*\]/\1/g' requirements-constraints.txt
+
+# EXTRA CMDs
+poetry config cache-dir
+poetry update
+poetry self add poetry-plugin-export
+
+# INFORMATIVE POST
+https://stackoverflow.com/questions/72869873/poetry-trying-to-install-everything-from-private-repository

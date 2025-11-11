@@ -1,0 +1,3 @@
+"""Cleaned and standardized data."""
+
+# NOTE: Rename and clean columns, Apply type casting, Handle duplicates, Join multiple raw tables if needed, etc.

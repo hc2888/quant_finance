@@ -1,0 +1,3 @@
+"""Deliver or write out data from the warehouse to external systems."""
+
+# NOTE: External systems such as S3, APIs, other databases, or downstream applications.
